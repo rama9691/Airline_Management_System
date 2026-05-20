@@ -1,1 +1,62 @@
+create database airlinemanagementsystem;
+use airlinemanagementsystem;
+create table login(username varchar(20), password varchar(20));
+
+insert into login values('admin', 'admin');
+select*from login;
+CREATE TABLE passenger (
+    name VARCHAR(20),
+    nationality VARCHAR(20),
+    aadhar VARCHAR(20),
+    address VARCHAR(50),
+    gender VARCHAR(20),
+    phone VARCHAR(10)
+);
+
+
+select*from passenger;
+create table flight(f_code varchar(20),f_name varchar(20),source varchar(50),destination varchar(40));
+create table cancellation(pnr_no varchar(10), cancellation_no varchar(10), cancellation_date DATE, fli_code varchar(15));
+
+
+
+
+create table passenger(pnr_no varchar(10), address varchar(30), nationality varchar(15), name varchar(20), gender varchar(10), ph_no varchar(15), passport_no varchar(20), fl_code varchar(10));
+create table payment(pnr_no varchar(10), ph_no varchar(15), cheque_no varchar(15), card_no varchar(20), paid_amt varchar(10), pay_date DATE);
+
+
+
+
+insert into flight values("1001","AI-1212","Bhopal","Mumbai");
+insert into flight values("1002","AI-1314","Delhi","Pune");
+insert into flight values("1003","AI-1415","Indore","Kerla");
+insert into flight values("1004","AI-1610","varansi","Hyderbad");
+insert into flight values("1005","AI-1212","Bangale","Mumbai");
+insert into flight values("1006","AI-1212","Bhopal","Karnatak");
+select*from flight;
+CREATE TABLE reservation (
+    PNR VARCHAR(15),
+    TICKET VARCHAR(20),
+    aadhar VARCHAR(20),
+    name VARCHAR(20),
+    nationality VARCHAR(30),
+    flightname VARCHAR(15),
+    flightcode VARCHAR(20),
+    src VARCHAR(30),
+    des VARCHAR(30),
+    ddate VARCHAR(30)
+);
+create table cancel(pnr varchar(20), name varchar(40), cancelno varchar(20), fcode varchar(20), ddate varchar(30));
+
+
+
+select*from reservation;
+
+
+select*from flight;
+select*from cancel;
+
+
+
+
 
